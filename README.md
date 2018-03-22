@@ -2,6 +2,7 @@
 It's a simple tool help you check somethings
 
 #Setup
+
 1.Clone this Project and Copy 'CheckToolUtility' Folder to:
     1)windows:  C:\Users\<Username>\Documents\maya\<maya_version>\scripts\
 
@@ -18,6 +19,7 @@ It's a simple tool help you check somethings
 6. Now, you can find it on your custom menu bar
 
 #Method
+
 1. non-manifold
 ![alt text](https://github.com/gcheih/maya_check_tool/blob/master/testProjects/readme/default_shader.png)
 2. check default shader(lambert1 if you do not assign your custom)

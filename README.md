@@ -21,8 +21,13 @@ It's a simple tool help you check somethings
 #Method
 
 1. non-manifold
-![alt text](https://github.com/gcheih/maya_check_tool/blob/master/testProjects/readme/default_shader.png)
-2. check default shader(lambert1 if you do not assign your custom)
 ![alt text](https://github.com/gcheih/maya_check_tool/blob/master/testProjects/readme/non.png?raw=true)
+
+2. check default shader(lambert1 if you do not assign your custom)
+![alt text](https://github.com/gcheih/maya_check_tool/blob/master/testProjects/readme/default_shader.png)
+
 3. check same name
 ![alt text](https://github.com/gcheih/maya_check_tool/blob/master/testProjects/readme/same_name.png)
+
+4. remove groups
+ try the sample, you will know =]

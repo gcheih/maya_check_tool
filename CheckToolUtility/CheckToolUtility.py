@@ -1,12 +1,12 @@
 import sys
-import  os
+import os
 
 from PySide import  QtGui, QtCore, QtUiTools
 import shiboken
 
 import maya.cmds as cmds
 import maya.OpenMayaUI as maya_ui
-import pymel.core as pm
+import MayaMethod as mm
 
 
 
@@ -35,6 +35,8 @@ def run():
 
 
 class CheckToolUI(QtGui.QMainWindow):
+    maya_method = mm.MayaMethod()
+
     def __init__(self):
         maya_main = shiboken.wrapInstance(long(maya_ui.MQtUtil.mainWindow()),QtGui.QWidget)
         super(CheckToolUI, self).__init__(maya_main)
@@ -58,16 +60,16 @@ class CheckToolUI(QtGui.QMainWindow):
         print('Close the ui')
 
     def on_result_message(self, value):
-        self.MainWindowUI.labe_2.setText("Output:\n{0}", format(value))
+        self.MainWindowUI.label_2.setText('Result:\n'+value)
 
     def check_non_manifold_geometry(self):
-        self.on_result_message('check_non_manifold_geometry')
+        self.on_result_message(self.maya_method.check_non_manifold_geometry())
 
     def check_default_shader(self):
-        self.on_result_message('check_default_shader')
+        self.on_result_message(self.maya_method.is_default_shader())
 
     def check_same_name(self):
-        self.on_result_message('check_same_name')
+        self.on_result_message(self.maya_method.check_duplicate_objects())
 
     def remove_empty_group(self):
-        self.on_result_message('remove_empty_group')
+        self.on_result_message(self.maya_method.check_empty_groups())
